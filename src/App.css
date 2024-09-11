@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'NetflixSans-Medium';
+  src: url('/fonts/NetflixSans-Medium.woff2') format('woff2'),
+       url('/fonts/NetflixSans-Medium.otf') format('otf');
+  }
+
+  @font-face {
+    font-family: 'NetflixSans-Regular';
+    src: url('/fonts/NetflixSans-Regular.woff2') format('woff2'),
+         url('/fonts/NetflixSans-Regular.otf') format('otf');
+    }
+
+    #label{
+  
+     transition: all 0.2s ease-out;
+    }
+
+    .email:focus + #label,
+    .email:not(:placeholder-shown) + #label{
+      transform: translateY(-50%);
+      font-size: 0.85rem;
+    }
+
+    
+    
+    .drop {
+      opacity: 0;
+      visibility: hidden;
+        transition:  all 150ms ease-in-out;
+        transition-delay: 150ms;
+    }
+    
+    .grp:hover .drop {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .transition-width {
+      transition: width 0.3s ease-in-out;
+    }
+    
+    .expanded {
+      width: 280px;
+      transition: width 0.3s ease;
+    }
+    
+
+   .grouptext:hover .navtext{
+ color: white;
+    } 
