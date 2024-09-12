@@ -54,13 +54,13 @@ function Headerhome() {
             </div>
           </div>
           <div className="sm:hidden lg:block ">
-            <ul className="flex gap-4 md:text-[0.9rem] xl:text-[1rem] items-center  font-netflixnormal text-white ">
+            <ul className="flex gap-4 md:text-[0.9rem] xl:text-[1rem] items-center  font-netflixnormal font-extralight text-white  ">
               <li>Home</li>
-              <li>TV Shows</li>
-              <li>Movies</li>
-              <li>New & Popular</li>
-              <li>My list</li>
-              <li>Browse by Languages</li>
+              <li className="hover:text-[#b3b3b3]   cursor-pointer transition-all ease-in duration-200">TV Shows</li>
+              <li className="hover:text-[#b3b3b3]  cursor-pointer transition-all ease-in duration-200">Movies</li>
+              <li className="hover:text-[#b3b3b3]  cursor-pointer transition-all ease-in duration-200">New & Popular</li>
+              <li className="hover:text-[#b3b3b3]  cursor-pointer transition-all ease-in duration-200">My list</li>
+              <li className="hover:text-[#b3b3b3]  cursor-pointer transition-all ease-in duration-200">Browse by Languages</li>
             </ul>
           </div>
         </div>

@@ -1,13 +1,31 @@
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
+
 function Searchbox() {
     
   const[search, setsearch] = useState(false)
+
+  const searchRef = useRef(null); 
+
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setsearch(false);
+      }
+    };
+   
+    document.addEventListener("mousedown", handleClickOutside);
+ 
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [searchRef]);
   return (
   <>
-    <div
-   className={`px-[6px] flex gap-2 items-center joker ${
-    search ? "border w-[270px] transition-width" : "w-[40px] transition-width"
+    <div ref={searchRef}
+   className={`px-[6px] flex gap-2  items-center joker ${
+    search ? "border w-[270px] bg-[#141414bb] transition-width" : "w-[40px] transition-width"
   } cursor-pointer py-1`}
 >
   <svg
@@ -33,7 +51,7 @@ function Searchbox() {
     <input
       type="text"
       placeholder="Titles, people, genres"
-      className="w-full bg-transparent text-white border-0 focus:outline-none"
+      className="w-full bg-transparent focus text-white border-0 focus:outline-none"
     />
   )}
 </div>
